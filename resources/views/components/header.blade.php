@@ -10,9 +10,11 @@
             <a href="#" data-toggle="dropdown"
                 class="nav-link dropdown-toggle nav-link-lg nav-link-user">
 
+                {{-- ditamabhkan codingannya --}}
                 <img alt="image" src="{{ auth()->user()->avatar ? Storage::url(auth()->user()->avatar)
                 : asset('img/avatar/avatar-4.png') }}" class="rounded-circle mr-1">
 
+                {{-- ditamabhkan codingannya --}}
                 <div class="d-sm-none d-lg-inline-block">Hi, {{ auth()->user()->name }}</div>
             </a>
             <div class="dropdown-menu dropdown-menu-right">
@@ -22,11 +24,15 @@
                     <i class="far fa-user"></i> Profile
                 </a>
                 <div class="dropdown-divider"></div>
+
+                 {{-- ditamabhkan codingannya --}}
                 <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
+
                     class="dropdown-item has-icon text-danger">
 
                     <i class="fas fa-sign-out-alt"></i> Logout
-
+                    
+                     {{-- ditamabhkan codingannya --}}
                 </a>
                 <form id="logout-form" action="{{ route('logout') }}" method="post">@csrf</form>
             </div>
